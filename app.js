@@ -8,7 +8,7 @@ var stylus = require('stylus');
 var cors = require('cors');
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://127.0.0.1/date', {useMongoClient: true});
+mongoose.connect('mongodb://root:JIzmXTIXVw38@127.0.0.1/date', {useMongoClient: true});
 
 
 var app = express();
