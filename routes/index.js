@@ -40,6 +40,7 @@ module.exports = function (app) {
                 console.log(err);
             else
                 var data = req.body;
+            if(req && req.file.filename){
                 var picUrl =  'uploads/'+req.file.filename;
             if(data.data == 'profile'){
                 res.status(201).json(picUrl);
@@ -62,10 +63,11 @@ module.exports = function (app) {
                         throw err;
 
                 });
-            }else{
-                res.status(201).json(picUrl+'~'+data.imageTime);
+                }else{
+                    res.status(201).json(picUrl+'~'+data.imageTime);
 
 
+                }
             }
         })
     });
